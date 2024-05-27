@@ -4,6 +4,9 @@
 #include <Adafruit_ST7735.h>
 #include <Adafruit_GFX.h>
 #include <DFRobotDFPlayerMini.h>
+#include "esp_timer.h"
+
+#define TIMER_INTERVAL_SEC 1  // intervalul timerului în secunde
 
 #define TFT_CS 5
 #define TFT_RST 4
@@ -14,13 +17,14 @@
 #define BUTTON_PREVIOUS 25
 #define BUTTON_PAUSE_PLAY 26
 #define BUTTON_NEXT 27
-#define BUTTON_START 13     // New button for starting music
-#define LED_RESUME_PIN 33   // Define your LED pin here
-#define LED_PAUSE_PIN 12    // Define your LED pin here
-#define BUTTON_VOL_UP 32    // Define volume up button pin
-#define BUTTON_VOL_DOWN 14  // Define volume down button pin
+#define DHTPIN 22
+#define BUTTON_START 13
+#define LED_RESUME_PIN 33
+#define LED_PAUSE_PIN 12
+#define BUTTON_VOL_UP 32
+#define BUTTON_VOL_DOWN 14
 
 extern Adafruit_ST7735 tft;
 extern DFRobotDFPlayerMini myDFPlayer;
 
-#endif  // CONFIG_H
+#endif

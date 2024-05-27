@@ -4,4 +4,4 @@
 void initMusicControl();
 void handleMusicControl();
 
-#endif  // MUSIC_CONTROL_H
+#endif
